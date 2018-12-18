@@ -23,9 +23,9 @@
 <!-- This is TEST ONLY!!!!!! -->
 			<?php
 				$db_host = '127.0.0.1';
-				$db_user = 'kingpelican_mgmt';
-				$db_password = 'kingpelican2016';
-				$db_name = 'kingpelican_bar';
+				$db_user = '';
+				$db_password = '';
+				$db_name = '';
 			?>
 
 			<?php
