@@ -43,32 +43,17 @@
 			<table>
 For test comment out ここでループの実験中。続きは明日・・・。 -->
 			<?php
-				$menu_sql = 'SELECT no FROM beer_menu;';
+				$menu_sql = 'SELECT * FROM beer_menu;';
 				if ($sql_result = $db_connect->query($menu_sql)) {
-					while ($field_value = $sql_result->fetch_assoc()) {
-					printf (
-						$field_value["no"], 
-						$field_value["brewery1"],
-						$field_value["brewery2"],
-						$field_value["beername1"],
-						$field_value["beername2"],
-						$field_value["locality"],
-						$field_value["style1"],
-						$field_value["style2"],
-						$field_value["abv"]
-						);
-				 	}
-					$result->close();
+					$menu_index = $sql_result->fetch_array();
 				}
-/*
-				$menu_index = array(1, 2, 3, 4);
-				foreach ($menu_index as $menu_no) {
+				foreach ($menu_index as $menu_no){
 					print $menu_no;
 				}
+				$result->close();
+
 				unset($menu_no);
-				print $menu_no
-*/
-				?>
+			?>
 <!-- For test comment out
 				<tr>
 					<th>
