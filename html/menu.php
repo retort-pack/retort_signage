@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <head>
 	<title>retort-pack</title>
-	
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="../css/menu.css">
 	
 </head>
 
-<!-- 
+<!-- List of valiables.
 	$db_connect -> Database connect instance.
 	$db_host -> Database Host IP Address.
 	$db_user -> Database User.
@@ -17,13 +18,10 @@
 -->
 
 	<body>
-		<div id="master">
-
-<!-- Connect to MySQL/MariaDB -->
-<!-- This is TEST ONLY!!!!!! -->
-
 			<?php
+				// This is Credential File. You Can ignore DocumentRoot.
 				require '../../../credential/credential.php';
+
 				$db_connect = new mysqli($db_host, $db_user, $db_password, $db_name);
 	
 				if ($db_connect->connect_error) {
@@ -33,7 +31,7 @@
 					$db_connect->set_charset("utf8");
 				}
 			?>
-
+		<div id="master">
 			<table>
 				<tr>
 					<th>NO</th>
@@ -51,13 +49,18 @@
 					while ($menu_info = $sql_result->fetch_assoc()){
 						print "<tr>";
 							print "<td>{$menu_info['no']}</td>";
-							print "<td>{$menu_info['brewery1']}</td>";
-							print "<td>{$menu_info['brewery2']}</td>";
-							print "<td>{$menu_info['beername1']}</td>";
-							print "<td>{$menu_info['beername2']}</td>";
+
+							print "<td>{$menu_info['brewery1']}<br>";
+							print "{$menu_info['brewery2']}</td>";
+							
+							print "<td>{$menu_info['beername1']}<br>";
+							print "{$menu_info['beername2']}</td>";
+
 							print "<td>{$menu_info['locality']}</td>";
-							print "<td>{$menu_info['style1']}</td>";
-							print "<td>{$menu_info['style2']}</td>";
+
+							print "<td>{$menu_info['style1']}<br>";
+							print "{$menu_info['style2']}</td>";
+
 							print "<td>{$menu_info['abv']}</td>";
 						print "</tr>";
 					};
