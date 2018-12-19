@@ -21,14 +21,9 @@
 
 <!-- Connect to MySQL/MariaDB -->
 <!-- This is TEST ONLY!!!!!! -->
-			<?php
-				$db_host = '127.0.0.1';
-				$db_user = '';
-				$db_password = '';
-				$db_name = '';
-			?>
 
 			<?php
+				require '../../../credential/credential.php';
 				$db_connect = new mysqli($db_host, $db_user, $db_password, $db_name);
 	
 				if ($db_connect->connect_error) {
