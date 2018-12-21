@@ -47,22 +47,22 @@
 				$index_no = 0;
 				if ($sql_result = $db_connect->query($menu_sql)) {
 					while ($menu_info = $sql_result->fetch_assoc()){
-						print "<tr>";
-							print "<td>{$menu_info['no']}</td>";
+						print "<tr>\n";
+							print "<td><span class='cNo'><span class='No{$menu_info['no']}'>{$menu_info['no']}</span></span></td>\n";
 
-							print "<td>{$menu_info['brewery1']}<br>";
-							print "{$menu_info['brewery2']}</td>";
+							print "<td><span class='cBrewery'><span class='No{$menu_info['no']}'>{$menu_info['brewery1']}</span></span><br>\n";
+							print "<span class='cBrewery'><span class='No{$menu_info['no']}'>{$menu_info['brewery2']}</span></span></td>\n";
 							
-							print "<td>{$menu_info['beername1']}<br>";
-							print "{$menu_info['beername2']}</td>";
+							print "<td><span class='cBeername'><span class='No{$menu_info['no']}'>{$menu_info['beername1']}</span></span><br>\n";
+							print "<span class='cBeername'><span class='No{$menu_info['no']}'>{$menu_info['beername2']}</span></span></td>\n";
 
-							print "<td>{$menu_info['locality']}</td>";
+							print "<td><span class='cLocality'><span class='No{$menu_info['no']}'>{$menu_info['locality']}</span></span></td>\n";
 
-							print "<td>{$menu_info['style1']}<br>";
-							print "{$menu_info['style2']}</td>";
+							print "<td><span class='cStyle'><span class='No{$menu_info['no']}'>{$menu_info['style1']}</span></span><br>\n";
+							print "<span class='cStyle'><span class='No{$menu_info['no']}'>{$menu_info['style2']}</span></span></td>\n";
 
-							print "<td>{$menu_info['abv']}</td>";
-						print "</tr>";
+							print "<td><span class='cABV'><span class='No{$menu_info['no']}'>{$menu_info['abv']}</span></span></td>\n";
+						print "</tr>\n\n";
 					};
 				};
 			?>
