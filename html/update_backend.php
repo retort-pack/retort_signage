@@ -12,9 +12,16 @@
 	$db_user -> Database User.
 	$db_password -> Database User's Password.
 	$db_name -> Database's Name.
-	$menu_sql -> SQL.
-	$sql_result -> exec SQL Result.
-	$menu_info -> Selected menu information.
+	$update_sql -> SQL.
+Get Post Data 
+	$noX_brewery1
+	$noX_brewery2
+	$noX_beername1
+	$noX_beername2
+	$noX_locality 
+	$noX_style1
+	$noX_style2
+	$noX_abv
 -->
 
 	<body>
@@ -32,8 +39,26 @@
 			}
 		?>
 
+		<?php
+			/*
+
+			if ($sql_result = $db_connect->query($update_sql)) {
+			*/
+
+			print htmlspecialchars($post_data['no1_abv']);
+
+		?>
+
 		<div id="master">
-			update_backend.phpでっせ
+			<?php
+				print var_dump(count($_POST));
+				if ($_POST['no7_brewery1']){
+					print "{$_POST['no7_brewery1']}";
+				} else{
+					print "No7はありません。";
+				}
+				print "<a href=\"update_frontend.php\">戻る</a>"
+			?>
 		</div>
 	</body>
 </html>

@@ -24,14 +24,15 @@ DROP TABLE IF EXISTS `beer_menu`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `beer_menu` (
   `no` int(1) NOT NULL,
-  `brewery1` varchar(100) NOT NULL DEFAULT '0',
-  `brewery2` varchar(100) NOT NULL DEFAULT '0',
-  `beername1` varchar(100) NOT NULL DEFAULT '0',
-  `beername2` varchar(100) NOT NULL DEFAULT '0',
-  `locality` varchar(100) NOT NULL DEFAULT '0',
-  `style1` varchar(100) NOT NULL DEFAULT '0',
-  `style2` varchar(100) NOT NULL DEFAULT '0',
-  `abv` varchar(10) NOT NULL DEFAULT '0'
+  `brewery1` varchar(100) DEFAULT NULL,
+  `brewery2` varchar(100) DEFAULT NULL,
+  `beername1` varchar(100) DEFAULT NULL,
+  `beername2` varchar(100) DEFAULT NULL,
+  `locality` varchar(100) DEFAULT NULL,
+  `style1` varchar(100) DEFAULT NULL,
+  `style2` varchar(100) DEFAULT NULL,
+  `abv` varchar(10) DEFAULT NULL,
+  PRIMARY KEY (`no`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -54,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-12-19 21:26:56
+-- Dump completed on 2018-12-22 14:36:10
