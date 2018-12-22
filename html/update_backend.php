@@ -13,6 +13,7 @@
 	$db_password -> Database User's Password.
 	$db_name -> Database's Name.
 	$update_sql -> SQL.
+	$data_no -> Post Data index no.
 Get Post Data 
 	$noX_brewery1
 	$noX_brewery2
@@ -39,24 +40,11 @@ Get Post Data
 			}
 		?>
 
-		<?php
-			/*
-
-			if ($sql_result = $db_connect->query($update_sql)) {
-			*/
-
-			print htmlspecialchars($post_data['no1_abv']);
-
-		?>
-
 		<div id="master">
 			<?php
-				print var_dump(count($_POST));
-				if ($_POST['no7_brewery1']){
-					print "{$_POST['no7_brewery1']}";
-				} else{
-					print "No7はありません。";
-				}
+				// for ($data_no=1; $data_no<=7; $data_no++){
+					print "SELECT * from beer_menu where beername1=\"{$_POST['no1_beername1']}\"";
+				// }
 				print "<a href=\"update_frontend.php\">戻る</a>"
 			?>
 		</div>
