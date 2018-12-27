@@ -37,15 +37,24 @@ Get Post Data
 			        exit();
 			} else {
 				$db_connect->set_charset("utf8");
-			}
+			};
 		?>
 
 		<div id="master">
 			<?php
-				// for ($data_no=1; $data_no<=7; $data_no++){
-					print "SELECT * from beer_menu where beername1=\"{$_POST['no1_beername1']}\"";
-				// }
-				print "<a href=\"update_frontend.php\">戻る</a>"
+				print_r ($_POST);
+				/*	$menu_sql = "UPDATE beer_menu SET 
+						brewery1=\"{$_POST['no{$data_no}_brewery1']}\",
+						brewery2=\"{$_POST['no{$data_no}_brewery2']}\",
+						beername1=\"{$_POST['no{$data_no}_brewery1']}\",
+						beername2=\"{$_POST['no{$data_no}_brewery2']}\",
+						locality=\"{$_POST['no{$data_no}_locality']}\",
+						style1=\"{$_POST['no{$data_no}_style1']}\",
+						style2=\"{$_POST['no{$data_no}_style2']}\",
+						abv=\"{$_POST['no{$data_no}_abv']}\"
+						WHERE no={$data_no});
+					$sql_result = $db_connect->query($menu_sql); */
+				print "<a href=\"update_frontend.php\">戻る</a>";
 			?>
 		</div>
 	</body>

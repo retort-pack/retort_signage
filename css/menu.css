@@ -29,6 +29,7 @@ table {
 	color: #FFFFFF;
 	border: #FFFFFF;
 	font-size: 100%;
+	border-collapse: collapse;
 	background-color: #000000; 
 	border-style: solid;
 
@@ -41,7 +42,7 @@ table th {
 table td {
 	color: #FFFFFF;
 	background-color: #000000;
-	border-style: solid;
+	border-style: solid; 
 }
 
 /* Define of Column Class */
