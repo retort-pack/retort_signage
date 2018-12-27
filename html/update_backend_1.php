@@ -12,8 +12,10 @@
 	$db_user -> Database User.
 	$db_password -> Database User's Password.
 	$db_name -> Database's Name.
-	$update_sql -> SQL.
-	$data_no -> Post Data index no.
+	$menu_sql -> For Get Data SQL.
+	$update_sql -> For Update Data SQL.
+	$data_no -> Post Data index no. // ****WILL BE DELETE**** //
+	$post_data -> Post Data Pointer.
 Get Post Data 
 	$noX_brewery1
 	$noX_brewery2
@@ -42,8 +44,10 @@ Get Post Data
 
 		<div id="master">
 			<?php
-				print_r ($_POST);
-				/*	$menu_sql = "UPDATE beer_menu SET 
+				foreach ($_POST as $post_data) {
+					print $post_data;
+				};
+				/*	$update_sql = "UPDATE beer_menu SET 
 						brewery1=\"{$_POST['no{$data_no}_brewery1']}\",
 						brewery2=\"{$_POST['no{$data_no}_brewery2']}\",
 						beername1=\"{$_POST['no{$data_no}_brewery1']}\",
@@ -53,7 +57,7 @@ Get Post Data
 						style2=\"{$_POST['no{$data_no}_style2']}\",
 						abv=\"{$_POST['no{$data_no}_abv']}\"
 						WHERE no={$data_no});
-					$sql_result = $db_connect->query($menu_sql); */
+						$sql_result = $db_connect->query($menu_sql); */
 				print "<a href=\"update_frontend.php\">戻る</a>";
 			?>
 		</div>

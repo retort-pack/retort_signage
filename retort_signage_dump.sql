@@ -42,8 +42,39 @@ CREATE TABLE `beer_menu` (
 
 LOCK TABLES `beer_menu` WRITE;
 /*!40000 ALTER TABLE `beer_menu` DISABLE KEYS */;
-INSERT INTO `beer_menu` VALUES (1,'KIRIN','BEER','一番','搾り','生麦','ピル','スナー','5.0'),(2,'KIRIN','BEER','一番','搾り','生麦','ピル','スナー','5.0'),(3,'KIRIN','BEER','一番','搾り','生麦','ピル','スナー','5.0'),(4,'KIRIN','BEER','一番','搾り','生麦','ピル','スナー','5.0'),(5,'KIRIN','BEER','一番','搾り','生麦','ピル','スナー','5.0'),(6,'KIRIN','BEER','一番','搾り','生麦','ピル','スナー','5.0'),(7,'KIRIN','BEER','一番','搾り','生麦','ピル','スナー','5.0');
+INSERT INTO `beer_menu` VALUES (1,'KIRIN','BEER','一番搾り','搾り','生麦','ピル','スナー','5.0'),(2,'KIRIN','BEER','一番','搾り','生麦','ピル','スナー','5.0'),(3,'KIRIN','BEER','一番','搾り','生麦','ピル','スナー','5.0'),(4,'KIRIN','BEER','一番','搾り','生麦','ピル','スナー','5.0'),(5,'KIRIN','BEER','一番','搾り','生麦','ピル','スナー','5.0'),(6,'KIRIN','BEER','一番','搾り','生麦','ピル','スナー','5.0'),(7,'','','','','','','','');
 /*!40000 ALTER TABLE `beer_menu` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `beer_menu_tran`
+--
+
+DROP TABLE IF EXISTS `beer_menu_tran`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `beer_menu_tran` (
+  `no` int(1) NOT NULL,
+  `brewery1` varchar(100) DEFAULT NULL,
+  `brewery2` varchar(100) DEFAULT NULL,
+  `beername1` varchar(100) DEFAULT NULL,
+  `beername2` varchar(100) DEFAULT NULL,
+  `locality` varchar(100) DEFAULT NULL,
+  `style1` varchar(100) DEFAULT NULL,
+  `style2` varchar(100) DEFAULT NULL,
+  `abv` varchar(10) DEFAULT NULL,
+  PRIMARY KEY (`no`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `beer_menu_tran`
+--
+
+LOCK TABLES `beer_menu_tran` WRITE;
+/*!40000 ALTER TABLE `beer_menu_tran` DISABLE KEYS */;
+INSERT INTO `beer_menu_tran` VALUES (1,'KIRIN','BEER','一番搾り','搾り','生麦','ピル','スナー','5.0'),(2,'KIRIN','BEER','一番','搾り','生麦','ピル','スナー','5.0'),(3,'KIRIN','BEER','一番','搾り','生麦','ピル','スナー','5.0'),(4,'KIRIN','BEER','一番','搾り','生麦','ピル','スナー','5.0'),(5,'KIRIN','BEER','一番','搾り','生麦','ピル','スナー','5.0'),(6,'KIRIN','BEER','一番','搾り','生麦','ピル','スナー','5.0'),(7,'','','','','','','','');
+/*!40000 ALTER TABLE `beer_menu_tran` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -55,4 +86,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-12-22 14:36:10
+-- Dump completed on 2018-12-28  1:25:58

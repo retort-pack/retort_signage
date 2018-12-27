@@ -32,7 +32,7 @@
 				}
 			?>
 		<div id="master">
-			<form action="./update_backend.php" method="POST">
+			<form action="./update_backend_1.php" method="POST">
 				<table>
 					<tr>
 						<th>NO</th>
