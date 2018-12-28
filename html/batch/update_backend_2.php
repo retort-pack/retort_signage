@@ -8,32 +8,25 @@
 
 <!-- List of valiables.
 	$menu_sql -> For Get Data SQL.
+	$menu_tran_sql -> For Get Data SQL.
 	$update_sql -> For Update Data SQL.
-	$data_no -> Post Data index no. // ****WILL BE DELETE**** //
-	$post_data -> Post Data Pointer.
-Get Post Data 
-	$noX_brewery1
-	$noX_brewery2
-	$noX_beername1
-	$noX_beername2
-	$noX_locality 
-	$noX_style1
-	$noX_style2
-	$noX_abv
+	$sql_result -> $menu_sql Result.
+	$tran_sql_result -> $menu_tran_sql Result
+	$index_no -> 
 -->
 
 	<body>
 		<?php
-			// This is Credential File. You Can ignore DocumentRoot.
-			require '../../../credential/credential.php';
+			require "./batch/connect_to_db.php";
 
-			$db_connect = new mysqli($db_host, $db_user, $db_password, $db_name);
+			for ($index_no=1; $index_no<=7; $index_no++){
+				$menu_sql = "SELECT * FROM beer_menu WHERE no=\"{$index_no}\"";
+				$menu_tran_sql = "SELECT * FROM beer_menu_tran WHERE no=\"{$index_no}\"";
+				$sql_result = $db_connect->query($menu_sql);
+				$tran_sql_result = $db_connect->query($menu_tran_sql);
 
-			if ($db_connect->connect_error) {
-				echo $db_connect->connect_error;
-			        exit();
-			} else {
-				$db_connect->set_charset("utf8");
+				if ($sql_result['brewery1'] == $tran_sql_result['brewery1']) {
+				};
 			};
 		?>
 
