@@ -19,18 +19,9 @@
 
 	<body>
 			<?php
-				// This is Credential File. You Can ignore DocumentRoot.
-				require '../../../credential/credential.php';
-
-				$db_connect = new mysqli($db_host, $db_user, $db_password, $db_name);
-	
-				if ($db_connect->connect_error) {
-					echo $db_connect->connect_error;
-				        exit();
-				} else {
-					$db_connect->set_charset("utf8");
-				}
+				require './batch/connect_to_db.php';
 			?>
+
 		<div id="master">
 			<form action="./update_backend_1.php" method="POST">
 				<table>
@@ -60,6 +51,8 @@
 								print "</tr>\n\n";
 							};
 						};
+						$sql_result->close();
+						$db_connect->close();
 					?>
 				</table>
 				<input type="submit">
