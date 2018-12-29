@@ -40,7 +40,7 @@
 					$db_connect->close();
 				?>
 			</table>
-			<p><a href="./batch/update_backend_2.php">これで更新する</a></p>
+			<p><a href="./update_backend_2.php">これで更新する</a></p>
 			<p><a href="update_frontend.php">前の画面に戻る</a></p>
 		</div>
 	</body>
