@@ -10,5 +10,6 @@
  - mysql -u USER_NAME -p beer_menu < retort_signage_dump.sql
 
 ### Edit Credential
- - You have to Edit 'html/credential.php'
+ - You have to Edit 'html/batch/credential.php.sample' and Move anywhere.
  - move to anywhere. You can ignore DocumentRoot.
+ - You have to Edit 'html/batch/connect_to_db.php'. Be careful, Your Base Directory is 'html'.
