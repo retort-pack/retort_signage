@@ -42,7 +42,7 @@ CREATE TABLE `beer_menu` (
 
 LOCK TABLES `beer_menu` WRITE;
 /*!40000 ALTER TABLE `beer_menu` DISABLE KEYS */;
-INSERT INTO `beer_menu` VALUES (1,'KIRIN','BEER','一番搾り','搾り','生麦','ピル','スナー','5.0'),(2,'KIRIN','BEER','一番','搾り','生麦','ピル','スナー','5.0'),(3,'KIRIN','BEER','一番','搾り','生麦','ピル','スナー','5.0'),(4,'KIRIN','BEER','一番','搾り','生麦','ピル','スナー','5.0'),(5,'KIRIN','BEER','一番','搾り','生麦','ピル','スナー','5.0'),(6,'KIRIN','BEER','一番','搾り','生麦','ピル','スナー','5.0'),(7,'','','','','','','','');
+INSERT INTO `beer_menu` VALUES (1,'KIRIN BEER','','一番搾り','','生麦','ピルスナー','','5.0'),(2,'KIRIN BEER','','一番搾り黒生','','岡山県','ダークラガー','','5.0'),(3,'TK Brewing','','Behid The Cloud','','川崎市','ニューイングランドIPA','','6.5'),(4,'YOKOHAMA','BAY BREWING','ベイヴァイスボック','','戸塚市','ヴァイツェンボック','','7.0'),(5,'Be Easy','Brewing','あれねIPA','test','青森県','IPA','','7.2'),(6,'南信州ビール','aaa','ヤマソーホップ','','長野県','フルーツビール','','9.0'),(7,'','','','','','','','');
 /*!40000 ALTER TABLE `beer_menu` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -73,7 +73,7 @@ CREATE TABLE `beer_menu_tran` (
 
 LOCK TABLES `beer_menu_tran` WRITE;
 /*!40000 ALTER TABLE `beer_menu_tran` DISABLE KEYS */;
-INSERT INTO `beer_menu_tran` VALUES (1,'KIRIN','BEER','一番搾り','搾り','生麦','ピル','スナー','5.0'),(2,'KIRIN','BEER','一番','搾り','生麦','ピル','スナー','5.0'),(3,'KIRIN','BEER','一番','搾り','生麦','ピル','スナー','5.0'),(4,'KIRIN','BEER','一番','搾り','生麦','ピル','スナー','5.0'),(5,'KIRIN','BEER','一番','搾り','生麦','ピル','スナー','5.0'),(6,'KIRIN','BEER','一番','搾り','生麦','ピル','スナー','5.0'),(7,'','','','','','','','');
+INSERT INTO `beer_menu_tran` VALUES (1,'KIRIN BEER','','一番搾り','','生麦','ピルスナー','','5.0'),(2,'KIRIN BEER','','一番搾り黒生','','岡山県','ダークラガー','','5.0'),(3,'TK Brewing','','Behid The Cloud','','川崎市','ニューイングランドIPA','','6.5'),(4,'YOKOHAMA','BAY BREWING','ベイヴァイスボック','','戸塚市','ヴァイツェンボック','','7.0'),(5,'Be Easy','Brewing','あれねIPA','test','青森県','IPA','','7.2'),(6,'南信州ビール','aaa','ヤマソーホップ','','長野県','フルーツビール','','9.0'),(7,'','','','','','','','');
 /*!40000 ALTER TABLE `beer_menu_tran` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -86,4 +86,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-12-28  1:25:58
+-- Dump completed on 2018-12-30 16:40:52
