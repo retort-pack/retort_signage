@@ -29,14 +29,17 @@
 				$get_data = $sql_result->fetch_assoc();
 				$get_tran_data = $tran_sql_result->fetch_assoc();
 
-				if ({$get_data['brewery1']} != {$get_tran_data['brewery1']} or
-				    {$get_data['brewery2']} != {$get_tran_data['brewery2']} or
-				    {$get_data['beername1']} != {$get_tran_data['beername1']} or
-				    {$get_data['beername2']} != {$get_tran_data['beername2']} or
-				    {$get_data['locality']} != {$get_tran_data['locality']} or
-				    {$get_data['style1']} != {$get_tran_data['style1']} or
-				    {$get_data['style2']} != {$get_tran_data['style2']} or
-				    {$get_data['abv']} != {$get_tran_data['abv']}) {
+				if ("{$get_data['brewery1']}" != "{$get_tran_data['brewery1']}" or
+				    "{$get_data['brewery2']}" != "{$get_tran_data['brewery2']}" or
+				    "{$get_data['beername1']}" != "{$get_tran_data['beername1']}" or
+				    "{$get_data['beername2']}" != "{$get_tran_data['beername2']}" or
+				    "{$get_data['locality']}" != "{$get_tran_data['locality']}" or
+				    "{$get_data['style1']}" != "{$get_tran_data['style1']}" or
+				    "{$get_data['style2']}" != "{$get_tran_data['style2']}" or
+				    "{$get_data['abv']}" != "{$get_tran_data['abv']}") {
+
+/*
+*/
 
 					$update_sql = "UPDATE beer_menu SET 
 							brewery1=\"{$get_tran_data['brewery1']}\",
@@ -52,7 +55,7 @@
 					$db_connect->query($update_sql);
 				};
 			};
-*/
+
 			$sql_result->close();
 			$tran_sql_result->close();
 			$db_connect->close();
