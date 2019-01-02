@@ -20,11 +20,12 @@
 	<body>
 		<?php
 			require './batch/connect_to_db.php';
+			$menu_sql = "SELECT * FROM beer_menu;";
+			$menu_tran_sql = "SELECT * FROM beer_menu_tran;";
+			$sql_result = $db_connect->query($menu_sql);
+			$tran_sql_result = $db_connect->query($menu_tran_sql);
+
 			for ($index_no=1; $index_no<=7; $index_no++){
-				$menu_sql = "SELECT * FROM beer_menu WHERE no=\"{$index_no}\";";
-				$menu_tran_sql = "SELECT * FROM beer_menu_tran WHERE no=\"{$index_no}\";";
-				$sql_result = $db_connect->query($menu_sql);
-				$tran_sql_result = $db_connect->query($menu_tran_sql);
 
 				$get_data = $sql_result->fetch_assoc();
 				$get_tran_data = $tran_sql_result->fetch_assoc();
