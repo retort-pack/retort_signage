@@ -38,9 +38,6 @@
 				    "{$get_data['style2']}" != "{$get_tran_data['style2']}" or
 				    "{$get_data['abv']}" != "{$get_tran_data['abv']}") {
 
-/*
-*/
-
 					$update_sql = "UPDATE beer_menu SET 
 							brewery1=\"{$get_tran_data['brewery1']}\",
 							brewery2=\"{$get_tran_data['brewery2']}\",
@@ -62,7 +59,11 @@
 		?>
 
 		<div id="master">
-				<a href="update_frontend.php">戻る</a>
+			<div id="complete-msg">
+				<h4>更新が完了しました。</h4>
+				<input type="button" value="ビールメニューへ" onClick="location.href='./menu.php'"><br><br> 
+				<input type="button" value="更新画面へ戻る" onClick="location.href='./update_frontend.php'">
+			</div>
 		</div>
 	</body>
 </html>
