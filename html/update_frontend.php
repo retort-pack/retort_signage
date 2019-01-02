@@ -55,8 +55,11 @@
 						$db_connect->close();
 					?>
 				</table>
-				<input type="submit">
+				<input type="submit" value="この内容で更新する">
 			</form>
+
+			<br><br>
+			<input type="button" value="ビールメニューへ" onClick="location.href='menu.php'">
 		</div>
 	</body>
 </html>
