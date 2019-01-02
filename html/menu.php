@@ -20,8 +20,18 @@
 	<body>
 		<?php
 			require './batch/connect_to_db.php';
+/*
+			$db_connect = new mysqli('127.0.0.1','kingpelican_mgmt','kingpelican2016','retort_signage');
+
+			if ($db_connect->connect_error) {
+				echo $db_connect->connect_error;
+			        exit();
+			} else {
+				$db_connect->set_charset("utf8");
+			};
+*/
 		?>
-		<div id="master">
+			<div id="master">
 			<table>
 				<tr>
 					<th>NO</th>
