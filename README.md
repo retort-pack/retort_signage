@@ -7,7 +7,7 @@
  - grant all privileges on DATABASE_NAME.* to 'USER_NAME'@'%' identigied by 'PASSWORD';
 
 ### Restore Database
- - mysql -u USER_NAME -p < retort_signage_dump.sql
+ - mysql -u USER_NAME -p DATABASE_NAME < retort_signage_dump.sql
 
 ### Edit Credential
  - You have to Copy From 'html/batch/credential.php.sample' To 'path/to/credential.php' and Move anywhere.

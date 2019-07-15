@@ -1,0 +1,14 @@
+version: '3'
+services:
+  web:
+    build:
+      context: .
+      dockerfile: retort-pack_app.Dockerfile
+    ports:
+      - "80:80"
+  db:
+    build:
+      context: .
+      dockerfile: retort-pack_db.Dockerfile
+    ports:
+      - "3306:3306"
