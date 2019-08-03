@@ -12,7 +12,5 @@ services:
     build:
       context: .
       dockerfile: retort-pack_db.Dockerfile
-    ports:
-      - "3306:3306"
     environment:
       - SAMPLE_ENV=sample
