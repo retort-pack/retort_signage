@@ -1,2 +1,4 @@
 FROM mariadb:latest
-ENV MYSQL_ROOT_PASSWORD=retort
+ENV MYSQL_DATABASE=retort
+ENV MYSQL_USER=retort
+ENV MYSQL_PASSWORD=retort

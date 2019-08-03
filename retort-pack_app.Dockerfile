@@ -8,6 +8,7 @@ RUN php -r "unlink('composer-setup.php');"
 RUN mv composer.phar /usr/local/bin/composer
 RUN composer global require laravel/installer
 ADD src /var/www/retort_signage
+ADD httpd.conf /etc/httpd/conf/httpd.conf
 RUN sed -i -e "s/DocumentRoot \"\/var\/www\/html\"/DocumentRoot \"\/var\/www\/retort_signage\"/g" /etc/httpd/conf/httpd.conf
 WORKDIR /var/www/retort_signage
 CMD ["/usr/sbin/httpd","-DFOREGROUND"]
