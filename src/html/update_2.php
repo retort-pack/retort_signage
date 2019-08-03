@@ -2,7 +2,7 @@
 <head>
 	<title>retort-pack</title>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="../css/update_backend_1.css">
+	<link rel="stylesheet" type="text/css" href="../css/update_2.css">
 	
 </head>
 
@@ -14,10 +14,10 @@
 
 	<body>
 		<?php
-			require './batch/connect_to_db.php';
+			require './common/connect_to_db.php';
 
 			for ($index_no=1; $index_no<=7; $index_no++){
-				require "./batch/updateQuery_no{$index_no}.php";
+				require "./common/updateQuery_no{$index_no}.php";
 				$db_connect->query($update_sql);
 			};
 		?>
@@ -35,13 +35,13 @@
 				</tr>
 				<?php
 					$menu_sql = 'SELECT * FROM beer_menu_tran;';
-					require './batch/get_beer_menu.php';
-					$sql_result->close();
+					require './common/get_beer_menu.php';
+
 					$db_connect->close();
 				?>
 			</table>
-			<input type="button" value="決定" onClick="location.href='./update_backend_2.php'"><br><br> 
-			<input type="button" value="キャンセル" onClick="location.href='update_frontend.php'">
+			<input type="button" value="決定" onClick="location.href='./update_3.php'"><br><br> 
+			<input type="button" value="キャンセル" onClick="location.href='update_1.php'">
 		</div>
 	</body>
 </html>

@@ -19,7 +19,7 @@
 
 	<body>
 		<?php
-			require './batch/connect_to_db.php';
+			require './common/connect_to_db.php';
 		?>
 
 			<div id="master">
@@ -35,9 +35,8 @@
 
 				<?php
 					$menu_sql = 'SELECT * FROM beer_menu;';
-					require './batch/get_beer_menu.php';
+					require './common/get_beer_menu.php';
 
-					$sql_result->close();
 					$db_connect->close();
 				?>
 			</table>

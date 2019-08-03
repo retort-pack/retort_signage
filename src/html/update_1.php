@@ -2,7 +2,7 @@
 <head>
 	<title>retort-pack</title>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="../css/update_frontend.css">
+	<link rel="stylesheet" type="text/css" href="../css/update_1.css">
 	
 </head>
 
@@ -19,11 +19,11 @@
 
 	<body>
 			<?php
-				require './batch/connect_to_db.php';
+				require './common/connect_to_db.php';
 			?>
 
 		<div id="master">
-			<form action="./update_backend_1.php" method="POST">
+			<form action="./update_2.php" method="POST">
 				<table>
 					<tr>
 						<th>NO</th>
@@ -59,7 +59,7 @@
 			</form>
 
 			<br><br>
-			<input type="button" value="ビールメニューへ" onClick="location.href='menu.php'">
+			<input type="button" value="ビールメニューへ" onClick="location.href='./menu.php'">
 		</div>
 	</body>
 </html>

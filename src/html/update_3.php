@@ -2,7 +2,7 @@
 <head>
 	<title>retort-pack</title>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="../css/update_backend_2.css">
+	<link rel="stylesheet" type="text/css" href="../css/update_3.css">
 	
 </head>
 
@@ -19,7 +19,7 @@
 
 	<body>
 		<?php
-			require './batch/connect_to_db.php';
+			require './common/connect_to_db.php';
 			$menu_sql = "SELECT * FROM beer_menu;";
 			$menu_tran_sql = "SELECT * FROM beer_menu_tran;";
 			$sql_result = $db_connect->query($menu_sql);
@@ -54,8 +54,6 @@
 				};
 			};
 
-			$sql_result->close();
-			$tran_sql_result->close();
 			$db_connect->close();
 		?>
 
@@ -63,7 +61,7 @@
 			<div id="complete-msg">
 				<h4>更新が完了しました。</h4>
 				<input type="button" value="ビールメニューへ" onClick="location.href='./menu.php'"><br><br> 
-				<input type="button" value="更新画面へ戻る" onClick="location.href='./update_frontend.php'">
+				<input type="button" value="更新画面へ戻る" onClick="location.href='./update_1.php'">
 			</div>
 		</div>
 	</body>
