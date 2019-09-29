@@ -1,6 +1,6 @@
 version: '3'
 services:
-  web:
+  webap:
     build:
       context: .
       dockerfile: retort-pack_app.Dockerfile
@@ -12,5 +12,3 @@ services:
     build:
       context: .
       dockerfile: retort-pack_db.Dockerfile
-    environment:
-      - SAMPLE_ENV=sample
