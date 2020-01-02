@@ -23,6 +23,7 @@ class MenuController extends Controller
      */
     public function index()
     {
-        return view('menu');
+        $beer_lists = \App\beer_menu::all();
+        return view('menu', compact('beer_lists'));
     }
 }

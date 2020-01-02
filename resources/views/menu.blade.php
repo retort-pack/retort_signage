@@ -69,7 +69,18 @@
         <div class="flex-center position-ref full-height">
             <div class="content">
                 <div class="title m-b-md">
-                    ここにビールメニューを表示させる
+                    <table border=2 bordercolor=#FFFFFF>
+                        <tr>
+                            <th>name</th>
+                            <th>value</th>
+                        </tr>
+                        <tr>
+                        @foreach ($beer_lists as $beer_list)
+                            <td>{{ $beer_list->name }}</td>
+                            <td>{{ $beer_list->value }}</td>
+                        @endforeach
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>
