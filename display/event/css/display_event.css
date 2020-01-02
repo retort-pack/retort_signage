@@ -1,0 +1,82 @@
+html {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    font-family: 
+        'Arial',
+        YuGothic,
+        'Yu Gothic',
+        'Hiragino Kaku Gothic ProN',
+        'ヒラギノ角ゴ ProN W3',
+        'メイリオ', Meiryo,
+        'ＭＳ ゴシック',
+        sans-serif;
+}
+
+#master {
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #FFFF00;
+}
+
+#page_head {
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 20%;
+    font-size: 150px;;
+    background-color: #FFFF00;
+}
+
+#page_body_1 {
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    top: 20%;
+    left: 0px;
+    width: 100%;
+    height: 25%;
+    text-align: center;
+    font-size: 220px;;
+    background-color: #FFFF00;
+}
+
+#page_body_2 {
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    top: 55%;
+    left: 0px;
+    width: 100%;
+    height: 25%;
+    text-align: center;
+    font-size: 90px;
+    background-color: #FFFF00;
+}
+
+#page_foot {
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    top: 80%;
+    left: 0px;
+    width: 100%;
+    height: 20%;
+    text-align: right;
+    font-size: 170px;
+    background-color: #FFFF00;
+}
