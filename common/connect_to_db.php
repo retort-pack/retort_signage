@@ -1,6 +1,6 @@
 <?php
 // This is Credential File. You Can ignore DocumentRoot.
-	require '../../../credential.php';
+	require '/var/www/credential.php';
 
 /* Define of Valiables.
 	$db_connect -> Database connect instance.
